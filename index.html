@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Icon -->
+    <link rel="stylesheet" href="./assetts/font-icon/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assetts/css/main.css">
+</head>
+
+<body>
+    <div class="grid wide js-play">
+        <div class="row">
+            <div class="col col-12">
+                <div class="header">
+                    <p class="header--text">Now playing:</p>
+                    <h2 class="header__name--music">It was for Her</h2>
+                    <img src="./assetts/img/It_was_for_Her.png" alt="" class="header--img">
+                    <div class="header__control">
+                        <button class="header__control--btn js-control--repeat">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </button>
+
+                        <button class="header__control--btn js-control--prev">
+                            <i class="fa-solid fa-backward-step"></i>
+                        </button>
+
+                        <button class="header__control--btn header__control--play">
+                            <i class="header__control--icon-play fa-solid fa-play"></i>
+                            <i class="header__control--icon-pause fa-solid fa-pause"></i>
+                        </button>
+
+                        <button class="header__control--btn js-control--next">
+                            <i class="fa-solid fa-forward-step"></i>
+                        </button>
+
+                        <button class="header__control--btn js-control--random">
+                            <i class="fa-sharp fa-solid fa-shuffle"></i>
+                        </button>
+                    </div>
+                    <input type="range" step="1" min="0" max="100" value="0" class="header--progress js-progress">
+
+                    <audio src="" id="audio"></audio>
+                </div>
+            </div>
+        </div>
+
+        <div class="list-play">
+            <div class="row js-list-play">
+            </div>
+        </div>
+    </div>
+
+    <script src="./assetts/js/main.js"></script>
+</body>
+
+</html>

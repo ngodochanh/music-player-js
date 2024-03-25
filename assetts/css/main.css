@@ -1,0 +1,233 @@
+:root {
+    --width: 480px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+    background-color: #f5f5f5;
+}
+
+.mt-14 {
+    margin-top: 14px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.grid {
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    width: var(--width);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -16px;
+    margin-left: -16px;
+}
+
+.col {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.header {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: fixed;
+    width: var(--width);
+}
+
+.header--text {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ec1f55;
+}
+
+.header__name--music {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-top: 12px;
+    height: 56px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.header--img {
+    width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 14px auto 0;
+}
+
+.header__control {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+.header__control--btn {
+    color: #666;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header__control--play {
+    --height: 42px;
+    height:var(--height);
+    width:var(--height);
+    background-color: #ec1f55;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.header__control--play i {
+    display: block;
+    margin: auto;
+}
+
+.header__control--play > .header__control--icon-pause {
+    display: none;
+}
+
+.header--progress {
+    --height: 12px;
+    --border-radius: 25px;
+    margin-top: 18px;
+    width: 100%;
+    height: var(--height);
+    -webkit-appearance: none;
+    background: #d3d3d3;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.header--progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: var(--height);
+    height: var(--height);
+    background-color: #ec1f55;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+
+.list-play {
+    margin-top: 450px;
+}
+
+.item-play {
+    display: flex;
+    padding: 12px 22px;
+    background-color: #fff;
+    align-items: center;
+    margin: 0 20px;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    cursor: pointer;
+}
+
+.item-play:last-child {
+    margin-bottom: 16px;
+}
+
+.item-play--img {
+    --width: 72px;
+    width: var(--width);
+    height: var(--width);
+    border-radius: 50%;
+}
+
+.item-play__info {
+    flex: 1;
+    margin-left: 22px;
+}
+
+.item-play__info--name {
+    font-size: 1.8rem;
+    color: #333;
+    height: 50.4px;
+    text-overflow: clip;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.item-play__info--author {
+    font-size: 1.2rem;
+    color: #999;
+    margin-top: 10px;
+}
+
+.item-play--icon {
+    font-size: 2rem;
+    color: #999;
+}
+
+.playing .header__control--icon-play {
+    display: none;
+}
+
+.playing .header__control--icon-pause {
+    display: block;
+}
+
+.js-control--repeat.active,
+.js-control--random.active {
+    color: #ec1f55;
+}
+
+.js-item-play.active {
+    background: rgb(236, 31, 85);
+ 
+}
+
+.js-item-play.active .item-play--img,
+.js-item-play.active .item-play--icon,
+.js-item-play.active .item-play__info--name,
+.js-item-play.active .item-play__info--author {
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
+}
+
+
+@media (max-width: 767px) {
+    :root {
+        --width: 100%;
+    }
+
+    .item-play {
+        padding: 12px 8px;
+    }
+
+    .item-play__info {
+        margin-left: 10px;
+    }
+}
